@@ -36,7 +36,7 @@ const PlaceOrderScreen = () => {
       if (success) {
          navigate(`/order/${order._id}`);
       }
-   });
+   }, [success]);
 
    const placeOrderHandler = () => {
       dispatch(
@@ -47,7 +47,7 @@ const PlaceOrderScreen = () => {
             itemsPrice: cart.itemsPrice,
             shippingPrice: cart.shippingPrice,
             taxPrice: cart.taxPrice,
-            toatalPrice: cart.totalPrice,
+            totalPrice: cart.totalPrice,
          })
       );
    };
